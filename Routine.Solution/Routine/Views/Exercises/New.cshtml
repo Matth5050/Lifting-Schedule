@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+ <h1>Day Details: </h1>
+
+    <h1>Add a new Exercise to @Model.Name</h1>
+
+    <form action="/days/@Model.Id/exercises" method="post">
+      <input id="dayId" name="dayId" type="hidden" value="@Model.Id">
+      <label for="exerciseDescription">Exercise Title</label>
+      <input id="exerciseDescription" name="exerciseDescription" type="text">
+      <button type='submit'>Add Exercise</button>
+    </form>

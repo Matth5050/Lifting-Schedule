@@ -1,0 +1,11 @@
+@{
+  Layout = "_Layout";
+}
+
+ <h1>Day Details: </h1>
+
+    <h2>@Model["exercise"].Description</h2>
+    <h3>Album: @Model["day"].Name</h3>
+
+    <a href='/days/@Model["day"].Id/exercises/new'>Add another exercise</a>
+    <a href='/days'>View all days</a>

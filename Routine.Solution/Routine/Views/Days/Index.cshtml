@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Routine.Models;
+
+<h1>Day</h1>
+
+@if (@Model.Count == 0)
+{
+  <h2>No Exercises have been added yet!</h2>
+}
+
+@foreach (Day day in Model)
+{
+  <h3><a href='/days/@day.Id'>@day.Name</a></h3>
+}
+
+<p><a href='/'>Back home</a></p>

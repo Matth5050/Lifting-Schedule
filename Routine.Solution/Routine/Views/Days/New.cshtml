@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Add a Day</h1>
+    <p>Add a day here:</p>
+
+    <form action="/days" method="post">
+      <label for="dayName">Day name</label>
+      <input id="dayName" name="dayName" type="text">
+      <button type="submit">Add</button>
+    </form>
+
+    <p><a href="/">Back home</a></p>
+    <p><a href="/days">Back to days</a></p>

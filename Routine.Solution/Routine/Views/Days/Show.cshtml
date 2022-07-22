@@ -1,0 +1,18 @@
+ @{
+  Layout = "_Layout";
+}
+ 
+ @using Routine.Models;
+
+    <h3>Here are all the exercises in this day:</h3>
+
+    <ol>
+    @foreach (Exercise exercise in @Model["exercises"])
+    {
+      <li><a href='/days/@Model["day"].Id/exercises/@exercise.Id'>@exercise.Description</a></li>
+    }
+    </ol>
+
+    <p><a href='/days/@Model["day"].Id/exercises/new'>Add a new exercise</a></p>
+    <p><a href='/days'>Return to day list</a></p>
+    <p><a href='/'>Return to Main Page</a></p>
